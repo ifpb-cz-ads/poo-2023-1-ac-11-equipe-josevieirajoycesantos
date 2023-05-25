@@ -1,4 +1,4 @@
-package QuestoesAnexas.Questao01;
+package QuestoesAnexas.Questao02;
 
 import java.util.ArrayList;
 
@@ -6,30 +6,30 @@ public class Main {
     public static void main(String[] args) {
         ArrayList <Object> lista = new ArrayList<>();
 
-        Edificio predio = new Edificio(50, 100, 100.0);
-        Bicicleta bicicleta = new Bicicleta(10.5);
-        Carro carro = new Carro(5, "Pequeno a gasolina", 50.0);
+        Quadrado quadrado = new Quadrado(2);
+        Retangulo retangulo = new Retangulo(3, 2);
+        Circulo circulo = new Circulo(2.0);
 
-        lista.add(bicicleta);
-        lista.add(carro);
-        lista.add(predio);
+        lista.add(quadrado);
+        lista.add(retangulo);
+        lista.add(circulo);
 
         Object objeto1 = lista.get(0);
-        if (objeto1 instanceof Bicicleta) {
-            Bicicleta bike = (Bicicleta) objeto1;
-            bike.PegadaDeCarbono();
+        if (objeto1 instanceof Quadrado) {
+            Quadrado square = (Quadrado) objeto1;
+            square.imprimir();
         }
 
         Object objeto2 = lista.get(1);
-        if (objeto2 instanceof Carro) {
-            Carro car = (Carro) objeto2;
-            car.PegadaDeCarbono();
+        if (objeto2 instanceof Retangulo) {
+            Retangulo rectangle = (Retangulo) objeto2;
+            rectangle.imprimir();
         }
 
         Object objeto3 = lista.get(2);
-        if (objeto3 instanceof Edificio) {
-            Edificio predioo = (Edificio) objeto3;
-            predioo.PegadaDeCarbono();
+        if (objeto3 instanceof Circulo) {
+            Circulo circle = (Circulo) objeto3;
+            circle.imprimir();
         }
-}
+    }
 }
